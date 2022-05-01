@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer-array name="card_items_bg">
+        <item>@drawable/ic_bg_gradient_card_one</item>
+        <item>@drawable/ic_bg_gradient_card_two</item>
+        <item>@drawable/ic_bg_gradient_card_three</item>
+        <item>@drawable/ic_bg_gradient_card_four</item>
+    </integer-array>
+</resources>
