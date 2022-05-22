@@ -1,0 +1,38 @@
+[
+    {
+        "controlType": 0,
+        "description": "Parametric curve",
+        "iconUrl": "/storage/icons/cg/ic_bezier_curve.png",
+        "name": "Bézier curve",
+        "order": 3,
+        "viewId": 3,
+        "id": 1
+    },
+    {
+        "controlType": 1,
+        "description": "Fractal",
+        "iconUrl": "/storage/icons/cg/ic_sierpensky_triangle.png",
+        "name": "Sierpinski Gasket",
+        "order": 1,
+        "viewId": 1,
+        "id": 2
+    },
+    {
+        "controlType": 1,
+        "description": "Fractal",
+        "iconUrl": "/storage/icons/cg/ic_koch_curve.png",
+        "name": "Koch Curve",
+        "order": 2,
+        "viewId": 2,
+        "id": 3
+    },
+    {
+        "controlType": 1,
+        "description": "Line Generation",
+        "iconUrl": "/storage/icons/cg/ic_dda_algorithm.png",
+        "name": "DDA",
+        "order": 4,
+        "viewId": -1,
+        "id": 4
+    }
+]
