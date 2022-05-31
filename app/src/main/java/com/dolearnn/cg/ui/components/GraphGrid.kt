@@ -1,7 +1,6 @@
 package com.dolearnn.cg.ui.components
 
 import androidx.compose.foundation.Canvas
-import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
@@ -9,9 +8,8 @@ import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Path
 import androidx.compose.ui.graphics.drawscope.Stroke
-import androidx.compose.ui.tooling.preview.Preview
-import com.dolearnn.cg.ui.theme.DLGreen
 import com.dolearnn.cg.extensions.dpToPx
+import com.dolearnn.cg.ui.theme.DLGreen
 
 private val TILE_SIZE = 40f.dpToPx()
 private val GRID_LINE = 1f.dpToPx()
@@ -65,10 +63,4 @@ fun GraphGrid(modifier: Modifier) {
             alpha = 0.7f
         )
     }
-}
-
-@Preview(backgroundColor = 0x00000000, showBackground = true)
-@Composable
-fun GridPreview() {
-    GraphGrid(modifier = Modifier.fillMaxSize())
 }

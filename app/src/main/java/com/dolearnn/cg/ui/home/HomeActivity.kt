@@ -3,15 +3,12 @@ package com.dolearnn.cg.ui.home
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
-import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
-import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavHostController
 import androidx.navigation.NavType
@@ -20,7 +17,6 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navArgument
 import com.dolearnn.cg.data.database.algorithm.Algorithm
-import com.dolearnn.cg.R
 import com.dolearnn.cg.ui.theme.DoLearnnCgTheme
 import com.dolearnn.cg.ui.theme.Turquoise500
 
@@ -122,50 +118,5 @@ class HomeActivity : ComponentActivity() {
     private fun navigateToSimulationScreen(algorithm: Algorithm) {
         navController
             .navigate("$SIMULATION_SCREEN/${algorithm.viewId}/${algorithm.controlType}/${algorithm.name}")
-    }
-}
-
-@Preview(showBackground = true)
-@Composable
-fun DefaultPreview() {
-    val getItemBg: (Int) -> Int = {
-        listOf(R.drawable.ic_bg_gradient_card_one, R.drawable.ic_bg_gradient_card_two)[it % 2]
-    }
-
-    DoLearnnCgTheme {
-        Column(
-            modifier = Modifier
-                .fillMaxSize()
-                .background(Turquoise500)
-        ) {
-            //    Header Region
-            Header(R.drawable.ic_home, "Home")
-            //    End Region
-
-            // Algorithms Region
-            AlgorithmsScreenContent(
-                algorithms = listOf(
-                    Algorithm(
-                        name = "Koch Curve",
-                        description = "Fractal",
-                        order = 1,
-                        iconURL = "/storage/icons/cg/ic_koch_curve.png",
-                        viewId = 1,
-                        controlType = 1
-                    ),
-                    Algorithm(
-                        name = "Sierpinsky Gasket",
-                        description = "Fractal",
-                        order = 2,
-                        iconURL = "/storage/icons/cg/ic_sierpensky_triangle.png",
-                        viewId = 2,
-                        controlType = 1
-                    )
-                ),
-                getBg = getItemBg,
-                onClick = {}
-            )
-            // End Region
-        }
     }
 }

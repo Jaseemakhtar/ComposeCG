@@ -37,8 +37,8 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
     }
     kotlinOptions {
         jvmTarget = '1.8'
@@ -70,7 +70,7 @@ dependencies {
     annotationProcessor "androidx.room:room-compiler:$room_version"
     kapt "androidx.room:room-compiler:$room_version"
     // optional - Kotlin Extensions and Coroutines support for Room
-     implementation "androidx.room:room-ktx:$room_version"
+    implementation "androidx.room:room-ktx:$room_version"
 
     /* compose glide */
     implementation "io.coil-kt:coil-compose:$coil_compose"
