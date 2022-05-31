@@ -1,4 +1,4 @@
-package com.dolearnn.cg.learnncg
+package com.dolearnn.cg
 
 import org.junit.Test
 
