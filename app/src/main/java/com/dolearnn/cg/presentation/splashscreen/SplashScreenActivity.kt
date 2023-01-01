@@ -1,13 +1,12 @@
-package com.dolearnn.cg.ui.splashscreen
+package com.dolearnn.cg.presentation.splashscreen
 
 import android.content.Intent
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.viewModels
 import androidx.lifecycle.lifecycleScope
-import com.dolearnn.cg.ui.home.HomeActivity
+import com.dolearnn.cg.presentation.HomeActivity
 import com.dolearnn.cg.workers.DbSyncWorker
-import kotlinx.coroutines.flow.collect
 
 class SplashScreenActivity : ComponentActivity() {
     private val viewModel: SplashScreenViewModel by viewModels()

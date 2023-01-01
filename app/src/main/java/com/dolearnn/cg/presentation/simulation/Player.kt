@@ -1,4 +1,4 @@
-package com.dolearnn.cg.ui.components
+package com.dolearnn.cg.presentation.simulation
 
 import androidx.compose.animation.core.Animatable
 import androidx.compose.animation.core.LinearEasing
@@ -59,7 +59,7 @@ fun PlayerController(
     ) {
         Image(
             painter = painterResource(id = if (isPlaying) R.drawable.ic_stop else R.drawable.ic_play),
-            contentDescription = if (isPlaying) "Stop" else "Play",
+            contentDescription = if (isPlaying) "Stop Icon" else "Play Icon",
             modifier = Modifier
                 .size(34.dp)
                 .clickable(

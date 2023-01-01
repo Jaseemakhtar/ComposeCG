@@ -1,7 +1,6 @@
-package com.dolearnn.cg.ui.home
+package com.dolearnn.cg.presentation.algorithms
 
 import androidx.annotation.DrawableRes
-import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.interaction.MutableInteractionSource
@@ -32,19 +31,21 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.lifecycle.viewmodel.compose.viewModel
-import coil.annotation.ExperimentalCoilApi
-import coil.compose.rememberImagePainter
+import coil.compose.rememberAsyncImagePainter
+import com.dolearnn.cg.config.Config
 import com.dolearnn.cg.data.database.algorithm.Algorithm
 import com.dolearnn.cg.ui.extensions.ColumnSpacer
 
 @Composable
-fun AlgorithmsScreen(viewModel: AlgorithmsViewModel = viewModel(), onClick: (Algorithm) -> Unit) {
+fun AlgorithmsScreen(
+    onClick: (Algorithm) -> Unit,
+    viewModel: AlgorithmsViewModel = viewModel()
+) {
     val algorithms by viewModel.algorithms.observeAsState(emptyList())
 
     AlgorithmsScreenContent(algorithms, viewModel::getItemBg, onClick)
 }
 
-@OptIn(ExperimentalFoundationApi::class)
 @Composable
 fun AlgorithmsScreenContent(
     algorithms: List<Algorithm>,
@@ -105,7 +106,7 @@ fun AlgorithmCardItem(
                 )
         )
         Image(
-            painter = rememberImagePainter(data = "https://dolearnn.com$icon"),
+            painter = rememberAsyncImagePainter(model = "${Config.BaseUrl}$icon"),
             contentDescription = "image_one",
             modifier = Modifier
                 .padding(end = 20.dp)

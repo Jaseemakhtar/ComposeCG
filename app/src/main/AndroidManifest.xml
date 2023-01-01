@@ -13,7 +13,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.DoLearnn.Cg">
         <activity
-            android:name="com.dolearnn.cg.ui.splashscreen.SplashScreenActivity"
+            android:name="com.dolearnn.cg.presentation.splashscreen.SplashScreenActivity"
             android:exported="true"
             android:theme="@style/SplashScreen">
             <intent-filter>
@@ -23,7 +23,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.dolearnn.cg.ui.home.HomeActivity"
+            android:name="com.dolearnn.cg.presentation.HomeActivity"
             android:theme="@style/Theme.DoLearnn.Cg" />
 
         <receiver

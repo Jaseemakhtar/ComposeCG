@@ -1,4 +1,4 @@
-package com.dolearnn.cg.ui.home
+package com.dolearnn.cg.presentation.algorithms
 
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel

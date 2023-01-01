@@ -1,4 +1,4 @@
-package com.dolearnn.cg.ui.home
+package com.dolearnn.cg.presentation
 
 import androidx.annotation.DrawableRes
 import androidx.compose.foundation.Image
@@ -21,23 +21,25 @@ import androidx.compose.ui.unit.sp
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.currentBackStackEntryAsState
 import com.dolearnn.cg.R
+import com.dolearnn.cg.presentation.navigation.AlgorithmsRoute
+import com.dolearnn.cg.presentation.navigation.algorithmNameArg
 import com.dolearnn.cg.ui.extensions.RowSpacer
 
 @Composable
-fun HeaderComponent(navHostController: NavHostController) {
+fun TopAppBar(navHostController: NavHostController) {
     val backStackEntry by navHostController.currentBackStackEntryAsState()
 
-    Header(
-        icon = if (backStackEntry?.destination?.route == ALGORITHMS_SCREEN)
+    AppBar(
+        icon = if (backStackEntry?.destination?.route == AlgorithmsRoute)
             R.drawable.ic_home else
             R.drawable.ic_arrow_back,
-        title = backStackEntry?.arguments?.getString(ALGORITHM_NAME)
+        title = backStackEntry?.arguments?.getString(algorithmNameArg)
             ?: stringResource(id = R.string.text_home)
     )
 }
 
 @Composable
-fun Header(@DrawableRes icon: Int, title: String) {
+private fun AppBar(@DrawableRes icon: Int, title: String) {
     Row(
         modifier = Modifier
             .fillMaxWidth()

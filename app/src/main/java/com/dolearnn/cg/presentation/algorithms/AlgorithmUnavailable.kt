@@ -1,4 +1,4 @@
-package com.dolearnn.cg.ui.components
+package com.dolearnn.cg.presentation.algorithms
 
 import androidx.compose.animation.core.LinearEasing
 import androidx.compose.animation.core.RepeatMode

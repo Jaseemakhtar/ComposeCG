@@ -1,4 +1,4 @@
-package com.dolearnn.cg.ui.splashscreen
+package com.dolearnn.cg.presentation.splashscreen
 
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel

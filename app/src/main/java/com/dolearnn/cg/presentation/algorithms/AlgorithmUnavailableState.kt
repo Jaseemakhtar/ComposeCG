@@ -1,4 +1,4 @@
-package com.dolearnn.cg.ui.home
+package com.dolearnn.cg.presentation.algorithms
 
 import androidx.compose.ui.geometry.Offset
 import com.dolearnn.cg.ui.algorithms.AbstractState
