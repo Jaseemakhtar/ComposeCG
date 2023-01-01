@@ -1,9 +1,9 @@
-package com.dolearnn.cg.usecase
+package com.dolearnn.cg.utils
 
 import kotlin.math.cos
 import kotlin.math.sin
 
-object RotationMatrixUseCase {
+object RotationMatrixUtils {
     fun getXRotationMatrix(radians: Float) = listOf(
         listOf(1.0f, 0.0f, 0.0f),
         listOf(0.0f, cos(radians), -sin(radians)),

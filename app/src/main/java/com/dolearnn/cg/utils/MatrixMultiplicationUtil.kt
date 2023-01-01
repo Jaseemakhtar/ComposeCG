@@ -1,8 +1,8 @@
-package com.dolearnn.cg.usecase
+package com.dolearnn.cg.utils
 
 import com.dolearnn.cg.ui.primitives.Point
 
-object MatrixMultiplicationUseCase {
+object MatrixMultiplicationUtil {
     fun matrixMultiply(point: Point, matrix: List<List<Float>>): Point {
         val currentPoint = point.toMatrix()
         val result = Array(3) { 0f }

@@ -5,7 +5,7 @@ import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.graphics.Path
 import com.dolearnn.cg.ui.primitives.Point
 import com.dolearnn.cg.ui.algorithms.AbstractState
-import com.dolearnn.cg.usecase.LerpUseCase
+import com.dolearnn.cg.utils.LerpUtil
 
 class BezierCurveState : AbstractState() {
 
@@ -103,7 +103,7 @@ class BezierCurveState : AbstractState() {
             val nextLevelPoints = mutableListOf<Point>()
             for (i in 0..currentPoints.size - 2) {
                 val interpolatedPoint =
-                    LerpUseCase.lerp(
+                    LerpUtil.lerp(
                         currentPoints[i],
                         currentPoints[i + 1],
                         t

@@ -36,7 +36,7 @@ import com.dolearnn.cg.ui.theme.Blue500
 import com.dolearnn.cg.ui.theme.Grey500
 import com.dolearnn.cg.ui.extensions.pressable
 import com.dolearnn.cg.extensions.dpToPx
-import com.dolearnn.cg.usecase.LerpUseCase
+import com.dolearnn.cg.utils.LerpUtil
 
 private val PLAYER_PROGRESS_LINE = 4f.dpToPx()
 private val PLAYER_PROGRESS_POINT_RADIUS = 4f.dpToPx()
@@ -137,7 +137,7 @@ fun PlayerProgressBar(isPlaying: Boolean, modifier: Modifier) {
         val height = size.height
         val centerY = height / 2f
 
-        val interpolatedValue = LerpUseCase.lerp(0f, width, animatable.value)
+        val interpolatedValue = LerpUtil.lerp(0f, width, animatable.value)
 
         drawLine(
             color = Blue500,

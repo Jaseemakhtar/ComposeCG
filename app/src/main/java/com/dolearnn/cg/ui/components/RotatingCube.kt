@@ -15,10 +15,10 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.drawscope.translate
 import com.dolearnn.cg.extensions.dpToPx
 import com.dolearnn.cg.ui.primitives.Point
-import com.dolearnn.cg.usecase.MatrixMultiplicationUseCase.matrixMultiply
-import com.dolearnn.cg.usecase.RotationMatrixUseCase.getXRotationMatrix
-import com.dolearnn.cg.usecase.RotationMatrixUseCase.getYRotationMatrix
-import com.dolearnn.cg.usecase.RotationMatrixUseCase.getZRotationMatrix
+import com.dolearnn.cg.utils.MatrixMultiplicationUtil.matrixMultiply
+import com.dolearnn.cg.utils.RotationMatrixUtils.getXRotationMatrix
+import com.dolearnn.cg.utils.RotationMatrixUtils.getYRotationMatrix
+import com.dolearnn.cg.utils.RotationMatrixUtils.getZRotationMatrix
 import kotlin.math.min
 
 private val POINT_RADIUS = 1.6f.dpToPx()

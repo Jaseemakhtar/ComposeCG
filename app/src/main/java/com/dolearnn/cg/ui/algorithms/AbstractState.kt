@@ -5,7 +5,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import com.dolearnn.cg.ui.algorithms.beziercurve.CONTROL_POINT_DIAMETER
 import com.dolearnn.cg.ui.primitives.Point
-import com.dolearnn.cg.usecase.RandomNumberUseCase.getRandom
+import com.dolearnn.cg.utils.RandomNumberUtil.getRandom
 
 abstract class AbstractState {
     protected var viewWidth: Float = 0f

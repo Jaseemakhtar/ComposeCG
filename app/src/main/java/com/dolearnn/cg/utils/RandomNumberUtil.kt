@@ -1,7 +1,7 @@
-package com.dolearnn.cg.usecase
+package com.dolearnn.cg.utils
 
 import kotlin.random.Random
 
-object RandomNumberUseCase {
+object RandomNumberUtil {
     fun getRandom(min: Float, max: Float): Float = Random.nextFloat() * (max - min + 0.1f) + min
 }

@@ -1,8 +1,8 @@
-package com.dolearnn.cg.usecase
+package com.dolearnn.cg.utils
 
 import com.dolearnn.cg.ui.primitives.Point
 
-object LerpUseCase {
+object LerpUtil {
     fun lerp(v0: Float, v1: Float, t: Float): Float {
         return (1 - t) * v0 + t * v1
     }

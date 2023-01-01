@@ -46,10 +46,7 @@ class HomeActivity : ComponentActivity() {
                         .fillMaxSize()
                         .background(Turquoise500)
                 ) {
-
-                    // Header Region
                     HeaderComponent(navController)
-                    // End Region
 
                     NavHost(
                         navController = navController,

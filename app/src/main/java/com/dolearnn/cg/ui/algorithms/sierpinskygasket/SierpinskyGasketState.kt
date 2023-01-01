@@ -5,7 +5,7 @@ import androidx.compose.ui.geometry.Offset
 import com.dolearnn.cg.ui.primitives.Point
 import com.dolearnn.cg.ui.primitives.Triangle
 import com.dolearnn.cg.ui.algorithms.AbstractState
-import com.dolearnn.cg.usecase.LerpUseCase
+import com.dolearnn.cg.utils.LerpUtil
 import kotlin.math.sqrt
 
 class SierpinskyGasketState : AbstractState() {
@@ -64,11 +64,11 @@ class SierpinskyGasketState : AbstractState() {
 
             _plottedTriangles.forEach { triangle ->
                 val t1a = triangle.a
-                val t1b = LerpUseCase.lerp(triangle.a, triangle.b, 0.5f)
-                val t1c = LerpUseCase.lerp(triangle.a, triangle.c, 0.5f)
+                val t1b = LerpUtil.lerp(triangle.a, triangle.b, 0.5f)
+                val t1c = LerpUtil.lerp(triangle.a, triangle.c, 0.5f)
 
                 val t2b = triangle.b
-                val t2c = LerpUseCase.lerp(triangle.b, triangle.c, 0.5f)
+                val t2c = LerpUtil.lerp(triangle.b, triangle.c, 0.5f)
 
                 val t3c = triangle.c
 
